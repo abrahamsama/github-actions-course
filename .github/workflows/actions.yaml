@@ -26,3 +26,5 @@ jobs:
           who-to-greet: "Swag"
       - name: Log Greeting Time
         run: echo "${{ steps.greet.outputs.time }}"
+      - name: Payload
+        run: echo "${{ github.event.client_payload.env }}"
